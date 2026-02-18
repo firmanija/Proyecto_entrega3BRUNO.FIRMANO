@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Inicio - Mi Blog{% endblock %}
+{% block content %}
+
+Últimos posts
+{% for post in posts %}
+{{ post.titulo }} — {{ post.autor }}
+{% empty %}
+No hay posts.
+{% endfor %}
+{% endblock %}

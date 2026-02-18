@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Crear Categoría{% endblock %}
+{% block content %}
+
+Crear Categoría
+{% csrf_token %} {{ form.as_p }} Guardar
+{% endblock %}

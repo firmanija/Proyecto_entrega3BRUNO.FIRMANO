@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Buscar{% endblock %}
+{% block content %}
+
+Buscar
+{{ form.q.label_tag }} {{ form.q }} Buscar
+{% if q %}
+  
+
+Resultados para "{{ q }}"
+{% for post in resultados %}
+{{ post.titulo }}
+{% empty %}
+No se encontraron resultados.
+{% endfor %}
+{% endif %} {% endblock %}
